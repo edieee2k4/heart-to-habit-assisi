@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Heart to Habit - Come & See</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body class="locked-scroll">
+    
+    <!-- Entrance Doors Layer -->
+    <div id="door-overlay">
+        <div class="door door-left">
+            <div class="door-panel"></div>
+        </div>
+        <div class="door door-right">
+            <div class="door-panel"></div>
+        </div>
+        
+        <div class="door-lock" id="rope-button">
+            <!-- Simulated Rope/Knot SVG -->
+            <svg width="60" height="150" viewBox="0 0 60 150" fill="none" class="rope-svg">
+                <!-- Top Rope hanging down -->
+                <path d="M30 -10 V 60" stroke="#E6E0D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="rope-strand"/>
+                <path d="M30 -10 V 60" stroke="#f0efe9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                
+                <!-- Knot -->
+                <path class="rope-knot" d="M30 65 C45 60, 50 75, 30 85 C10 75, 15 60, 30 65 Z" fill="#E6E0D4" stroke="#c4bead" stroke-width="2" />
+                
+                <!-- Two bottom ends -->
+                <path d="M25 82 C20 100, 15 120, 20 140" stroke="#E6E0D4" stroke-width="6" stroke-linecap="round" class="rope-strand rope-tail-left"/>
+                <path d="M35 82 C40 100, 45 120, 40 140" stroke="#E6E0D4" stroke-width="6" stroke-linecap="round" class="rope-strand rope-tail-right"/>
+            </svg>
+            <p class="unlock-text">Untie to Enter</p>
+        </div>
+    </div>
+
+    <!-- Main Content wrapper, hidden initially -->
+    <main id="main-content">
+        <!-- Section 1: Hero Poster Information -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="decorative-border"></div>
+                
+                <h1 class="main-title">Heart to Habit</h1>
+                
+                <p class="subtitle italic-serif">"Your Hand Will Guide Me"</p>
+                <p class="reference">– Psalms 139:10</p>
+
+                <div class="divider">
+                    <svg width="100" height="15" viewBox="0 0 100 15" fill="none">
+                        <path d="M50 7.5C45 2 35 2 35 7.5C35 13 45 13 50 7.5ZM50 7.5C55 2 65 2 65 7.5C65 13 55 13 50 7.5Z" stroke="#8c7853" stroke-width="1.5"/>
+                        <line x1="0" y1="7.5" x2="35" y2="7.5" stroke="#8c7853" stroke-width="1"/>
+                        <line x1="65" y1="7.5" x2="100" y2="7.5" stroke="#8c7853" stroke-width="1"/>
+                    </svg>
+                </div>
+
+                <div class="event-details">
+                    <div class="detail-item" style="flex-direction: column;">
+                        <div>
+                            <p class="detail-strong large-date">April 30th, 4:00 PM</p>
+                            <p class="detail-light">to</p>
+                            <p class="detail-strong large-date">May 5th, 3:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="capuchins-badge">
+                    <h2 class="script-title">Capuchins</h2>
+                    <h3 class="come-see">Come & See</h3>
+                </div>
+
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1.5: Envelope Option -->
+        <section class="envelope-section fade-in-section">
+            <h2 class="envelope-title">A Special Message</h2>
+            <p class="envelope-subtitle">Tap the wax seal to open</p>
+            
+            <div class="envelope-container" id="envelope-wrapper">
+                <div class="envelope">
+                    <div class="letter">
+                        <svg class="cross-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M12 3v18M7 8h10"/></svg>
+                        <h3>Jesus is calling you.</h3>
+                    </div>
+                    <!-- Envelope structural panels -->
+                    <div class="envelope-front-left"></div>
+                    <div class="envelope-front-right"></div>
+                    <div class="envelope-front-bottom"></div>
+                    
+                    <!-- Flap and Seal -->
+                    <div class="envelope-flap" id="envelope-flap"></div>
+                    <div class="wax-seal" id="wax-seal">
+                        <span style="font-family: var(--font-script); font-size: 1.8rem; margin-top:2px;">F</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1.7: Video Section -->
+        <section class="video-section fade-in-section" style="padding: 2rem 1.5rem 4rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 2rem;">A special invite</h2>
+            <div class="video-wrapper-interactive" style="position: relative; width: 100%; max-width: 900px; margin-bottom: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; background: #000; cursor: pointer;">
+                <video id="vocation-video" src="vocation april (2).mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+                <div id="unmute-badge" class="unmute-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+                    </svg>
+                    <span>Tap to Unmute</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Quotes -->
+        <section class="quotes-section fade-in-section">
+            <div class="section-container">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="quote-icon"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="#8c7853"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.997v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="#8c7853"/></svg>
+                
+                <div class="quote-carousel">
+                    <div class="quote-card active">
+                        <blockquote>"Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible."</blockquote>
+                        <cite>– St. Francis of Assisi</cite>
+                    </div>
+                    <div class="quote-card">
+                        <blockquote>"Preach the Gospel at all times and when necessary, use words."</blockquote>
+                        <cite>– St. Francis of Assisi</cite>
+                    </div>
+                    <div class="quote-card">
+                        <blockquote>"For it is in giving that we receive."</blockquote>
+                        <cite>– St. Francis of Assisi</cite>
+                    </div>
+                </div>
+                
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Location Video/Map -->
+        <section class="location-section fade-in-section">
+            <h2 class="section-title">Journey With Us</h2>
+            <p class="section-subtitle">Find your way to the Ashram</p>
+            
+            <div class="media-container">
+                <div class="video-wrapper">
+                    <div class="map-overlay">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15729.141753716913!2d76.7135322!3d9.7431284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07cebc883ed69b%3A0xe54d6f83ec5b6510!2sAssisi%20Ashram%2C%20Bharananganam!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://maps.app.goo.gl/Jw6L1rfkgiqSvgJb6?g_st=aw" target="_blank" class="primary-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Open in Maps Route
+            </a>
+        </section>
+
+        <!-- Section 4: Download Flyer -->
+        <section class="download-section fade-in-section">
+            <h2 class="section-title" style="font-size: 2.5rem;">Event Poster</h2>
+            <p class="section-subtitle">Download and share with your friends!</p>
+            <a href="WhatsApp Image 2026-04-15 at 11.37.03 PM.jpeg" download class="primary-btn" style="background: var(--accent-secondary);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="margin-right: 5px;">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download Poster
+            </a>
+        </section>
+
+        <footer>
+            <div class="peace-icon">🕊️</div>
+            <p>Pax et Bonum - Peace and Goodness</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
